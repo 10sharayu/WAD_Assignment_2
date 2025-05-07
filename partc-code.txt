@@ -1,0 +1,75 @@
+First open new terminal then type these commands
+
+#This command only if npm --version gives or otherwise not
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+npm --version
+npm install -g @angular/cli@latest
+ng new part-c
+y
+CSS (click on this)
+n (Only if any question is asked)
+it will take time to intall now. till then edit html and ts file 
+
+html file
+
+
+<h1>{{title}}</h1>
+
+<input type="text" #name placeholder="Enter your Name" name="Name"> <br>
+<input type="text" #address placeholder="Enter your Address" name="Address"> <br>
+<input type="text" #contact placeholder="Enter your Contact" name="Contact"> <br>
+<input type="email" #email placeholder="Enter your Email" name="Email"> <br>
+<input type="password" #password placeholder="Enter your Password" name="Password"> <br>
+
+<button (click)="getValue(name.value, address.value, contact.value, email.value)">Register</button>
+
+<h1>Your Registered Data</h1> <br>
+<p>Name:{{displayname}}</p>
+<p>Address:{{displayaddress}}</p>
+<p>Contact:{{displaycontact}}</p>
+<p>Email:{{displayemail}}</p>
+
+ts file
+
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {
+  title = 'Registration Form';
+
+  displayname='';
+  displayaddress='';
+  displaycontact='';
+  displayemail='';
+
+  getValue(name:string, address:string, contact:string, email:string)
+  {
+    this.displayname=name;
+    this.displayaddress=address;
+    this.displaycontact=contact;
+    this.displayemail=email;
+  }
+}
+
+css file
+
+input{
+    width: 400px;
+    height: 25px;
+    margin: 10px;
+    padding: 5px;
+}
+
+now put in these terminal commands
+
+cd part-c
+ng serve
+y
+Now click on link generated to see result.

@@ -1,0 +1,36 @@
+If not downloaded then download git and vscode.
+First create a folder and then select that folder on vscode.
+then go on terminal and write "mkdir parta" to create a folder named parta.
+then create a text file in part a folder and write something.
+then perform following commands:
+
+git --version
+git init
+git add .
+git status
+
+Now go to your GitHub acc create a new repo.
+Now perform following commands:
+
+git remote add origin "link_of_your_new_repo"
+git commit -m "First Commit"
+[ Optional commands if needed: 
+git config --global user.email "your GitHub email id"
+git config --global user.name "your GitHub username" ]
+git status
+git push -u origin master
+git status
+
+
+Now create another text file in part a and perform following commands:
+
+git status
+git add .
+git status
+git commit -m "Second Commit"
+git push -u origin master
+
+Now you will see changes in your repo.
+
+
+

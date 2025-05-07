@@ -1,0 +1,18 @@
+js code
+console.log("Name : Sharayu Tekade");
+console.log("Class: TE");
+console.log("Subject : LP2 WAD");
+console.log("Assignment 2B");
+
+dockerfile code
+FROM node:alpine
+COPY . /partb
+CMD node /partb/sharayu.js
+
+terminal commands
+docker --version
+node sharayu.js
+docker build -t partb .
+docker images
+docker run -d partb 
+docker ps
